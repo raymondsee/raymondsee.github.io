@@ -76,6 +76,22 @@ $(function(){
             closeOffcanvasMenu();
         }
     });
+    
+    
+    // swap hight resolution images if it is on retina display
+    if (isOnRetinaDisplay()) {
+        $("img").each(function(){
+            originalSrc = $(this).attr('src');
+            if (originalSrc.indexOf("@2x")<0) {
+                console.log(originalSrc);
+                dotIndex = originalSrc.lastIndexOf(".");
+                newSrc = originalSrc.slice(0, dotIndex) + "@2x" + originalSrc.substr(dotIndex);
+                console.log(newSrc);
+                $(this).attr('src', newSrc);
+            }
+        });
+    }
+    
 
 });
 
@@ -197,4 +213,10 @@ var isScrolledIntoView = function (targetId) {
 
     var isVisible = (targetTop >= 0) && (targetBottom <= window.innerHeight);
     return isVisible;
+}
+
+var isOnRetinaDisplay = function () {
+    var retina = window.devicePixelRatio > 1;
+    
+    return retina;
 }

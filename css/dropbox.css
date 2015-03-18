@@ -422,6 +422,9 @@ button.custom-blue-button, a.custom-blue-button {
       margin-bottom: 10px; }
     .container.business .dropbox-business-features .feature-desc {
       line-height: 25px; }
+    .container.business .dropbox-business-features img {
+      width: 200px;
+      height: 182px; }
   .container.business #key.reset, .container.business #watch.reset, .container.business #devices.reset {
     -moz-transition: margin-left 1s ease-in, opacity 1s ease-in, 1s -moz-filter linear;
     -webkit-transition: margin-left 1s ease-in, opacity 1s ease-in, 1s -webkit-filter linear;
@@ -744,6 +747,18 @@ footer .container.footer {
     -o-filter: blur(1px);
     -ms-filter: blur(1px);
     filter: blur(1px); } }
+/*
+ * Retina display
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .container.video {
+    background-image: url("../assets/video-still@2x.jpg");
+    background-size: 1500px 500px; }
+    .container.video button.play-button {
+      width: 105px;
+      height: 105px;
+      background-image: url("../assets/player_large@2x.png");
+      background-size: 105px 105px; } }
 /*
  * Animations
 */

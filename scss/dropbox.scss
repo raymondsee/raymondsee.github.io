@@ -188,6 +188,11 @@ button.custom-blue-button, a.custom-blue-button {
         .feature-desc {
             line-height: 25px;
         }
+        
+        img {
+            width: 200px;
+            height: 182px;
+        }
     }
     
     #key.reset, #watch.reset, #devices.reset {
@@ -577,6 +582,29 @@ footer {
         position: absolute; margin-left: 750px; opacity: 0; -webkit-filter: blur(1px); -moz-filter: blur(1px);-o-filter: blur(1px);-ms-filter: blur(1px);filter: blur(1px);
     }
 }
+
+/*
+ * Retina display
+*/
+@media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    .container.video {
+        background-image: url("../assets/video-still@2x.jpg");
+        background-size: 1500px 500px;
+
+        button.play-button {
+            width: 105px;
+            height: 105px;
+            background-image: url("../assets/player_large@2x.png");
+            background-size: 105px 105px;
+        }
+    }
+  }
 /*
  * Animations
 */
