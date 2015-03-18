@@ -56,7 +56,7 @@ $(function(){
      * 
      * Toggle the offcanvas menu when clicking the hamburger button
      */
-    $("button.hamburger-button").on("click", function() {
+    $("button.hamburger-button, button.close-button").on("click", function() {
         var offcanvasMenu = $(".offcanvas-menu");
         if (offcanvasMenu.hasClass("in")) {
             closeOffcanvasMenu();
@@ -69,10 +69,11 @@ $(function(){
     });
     
     // Close offcanvas menu when click outside of the menu and only when the menu is open
-    $(document).on("click", function(e){
+    $(document).on("click tap", function(e){
         if ($(".offcanvas-menu").hasClass("in") && 
             $(e.target).parents(".offcanvas-menu").length ==0 && 
-            $(e.target).is(":not(.offcanvas-menu")) {
+            !$(e.target).hasClass("offcanvas-menu")
+            ) {
             closeOffcanvasMenu();
         }
     });
@@ -83,10 +84,8 @@ $(function(){
         $("img").each(function(){
             originalSrc = $(this).attr('src');
             if (originalSrc.indexOf("@2x")<0) {
-                console.log(originalSrc);
                 dotIndex = originalSrc.lastIndexOf(".");
                 newSrc = originalSrc.slice(0, dotIndex) + "@2x" + originalSrc.substr(dotIndex);
-                console.log(newSrc);
                 $(this).attr('src', newSrc);
             }
         });

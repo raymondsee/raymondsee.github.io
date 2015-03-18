@@ -149,11 +149,11 @@ button.custom-blue-button, a.custom-blue-button {
     }
     
     .center-column {
-        padding-top: 100px;
-        padding-bottom: 180px;
+        padding-top: 70px;
+        padding-bottom: 70px;
         
         .inner-wrapper {
-            padding: 0px 110px;
+            padding: 0px 0px;
             
             a {
                 color: white;
@@ -215,7 +215,7 @@ button.custom-blue-button, a.custom-blue-button {
     padding-bottom: 60px;
     
     .inner-wrapper {
-        width: 40%;
+        width: 100%;
         display: inline-block;
     }
     
@@ -264,8 +264,6 @@ button.custom-blue-button, a.custom-blue-button {
                 background: #FFF;
                 padding: 20px 5px;
                 opacity: 0.7;
-/*                padding-bottom: 150px;
-                padding-right: 30px;*/
             }
         }
         
@@ -275,8 +273,6 @@ button.custom-blue-button, a.custom-blue-button {
             top: 35%;
             z-index: 999;
             img {
-/*                padding-bottom: 150px;
-                padding-left: 30px;*/
                 background: #FFF;
                 padding: 20px 5px;
                 opacity: 0.7;
@@ -314,7 +310,7 @@ button.custom-blue-button, a.custom-blue-button {
     
     .carousel-text {
         margin-bottom: 45px;
-        width: 50%;
+        width: 100%;
         display: inline-block;
         line-height: 25px;
     }
@@ -467,7 +463,7 @@ footer {
         display: block;
         padding: 10px 15px;
         font-size: 20px;
-        
+        float: left;
     }
     
     a {
@@ -495,6 +491,17 @@ footer {
             
         }
     }
+    
+    button.close-button {
+        display: block;
+        border: none;
+        color: white;
+        background: transparent;
+        padding: 8px;
+        cursor: pointer;
+        margin-right: 10px;
+        float: right;
+    }
 }
 
 @media (max-width: 991) {
@@ -514,9 +521,29 @@ footer {
 }
 
 @media (min-width: 768px) {
+    .container.header {
+        .center-column {
+            padding-top: 100px;
+            padding-bottom: 180px;
+            .inner-wrapper {
+                padding: 0 110px;
+            }
+        }
+    }
+    
     .container.video {
         .video-container {
             padding-top: 20px;
+        }
+    }
+    
+    .container.carousel {
+        .inner-wrapper {
+            width: 40%;
+        }
+        
+        .carousel-text {
+            width: 40%;
         }
     }
 
