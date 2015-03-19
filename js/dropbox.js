@@ -89,16 +89,16 @@ $(function(){
     
     
     // swap hight resolution images if it is on retina display
-//    if (isOnRetinaDisplay()) {
-//        $("img").each(function(){
-//            originalSrc = $(this).attr('src');
-//            if (originalSrc.indexOf("@2x")<0) {
-//                dotIndex = originalSrc.lastIndexOf(".");
-//                newSrc = originalSrc.slice(0, dotIndex) + "@2x" + originalSrc.substr(dotIndex);
-//                $(this).attr('src', newSrc);
-//            }
-//        });
-//    }
+    if (isOnRetinaDisplay()) {
+        $("img").each(function(){
+            originalSrc = $(this).attr('src');
+            if (originalSrc.indexOf("@2x")<0) {
+                dotIndex = originalSrc.lastIndexOf(".");
+                newSrc = originalSrc.slice(0, dotIndex) + "@2x" + originalSrc.substr(dotIndex);
+                $(this).attr('src', newSrc);
+            }
+        });
+    }
     
 
 });
@@ -188,7 +188,6 @@ var slideInBusinessFeatures = function () {
      * if screnn size is less than 992px, don't do the animation
      */
     if ($(window).width() < 992) {
-        
         return false;
     }
     
@@ -196,11 +195,11 @@ var slideInBusinessFeatures = function () {
         
     setTimeout(function() {
         $("#watch").addClass("reset").css("margin-left", "525px").css("opacity", "1");
-    }, 300);
+    }, 400);
 
     setTimeout(function() {
         $("#devices").addClass("reset").css("margin-left", "185px").css("opacity", "1");
-    }, 500);
+    }, 800);
 
     setTimeout(function() {
         $("#business-container").attr("style", null);
@@ -209,7 +208,7 @@ var slideInBusinessFeatures = function () {
         $("#devices").removeClass("reset").attr("style", null);
         
         $("#business-container").addClass("normal");//xyz
-    }, 1000);
+    }, 2000);
 
     return false;
 }
