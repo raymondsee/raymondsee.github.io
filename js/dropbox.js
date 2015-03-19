@@ -208,7 +208,7 @@ var slideInBusinessFeatures = function () {
         $("#devices").removeClass("reset").attr("style", null);
         
         $("#business-container").addClass("normal");//xyz
-    }, 2000);
+    }, 3000);
 
     return false;
 }
