@@ -89,16 +89,16 @@ $(function(){
     
     
     // swap hight resolution images if it is on retina display
-    if (isOnRetinaDisplay()) {
-        $("img").each(function(){
-            originalSrc = $(this).attr('src');
-            if (originalSrc.indexOf("@2x")<0) {
-                dotIndex = originalSrc.lastIndexOf(".");
-                newSrc = originalSrc.slice(0, dotIndex) + "@2x" + originalSrc.substr(dotIndex);
-                $(this).attr('src', newSrc);
-            }
-        });
-    }
+//    if (isOnRetinaDisplay()) {
+//        $("img").each(function(){
+//            originalSrc = $(this).attr('src');
+//            if (originalSrc.indexOf("@2x")<0) {
+//                dotIndex = originalSrc.lastIndexOf(".");
+//                newSrc = originalSrc.slice(0, dotIndex) + "@2x" + originalSrc.substr(dotIndex);
+//                $(this).attr('src', newSrc);
+//            }
+//        });
+//    }
     
 
 });
