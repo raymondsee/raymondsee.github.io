@@ -24,6 +24,18 @@ $(function(){
         return false;
     });
     
+    $(".video-container").on("click", function(e){
+        
+        if ($(e.target).hasClass("video-container")) {
+            var video = $(this).find("video");
+            console.log(video[0].pause());
+            $(this).hide();
+            $("button.play-button").show();
+        }
+        
+        return false;
+    });
+    
     /*
      * Check if specific element is scrolled into view
      */
@@ -43,6 +55,11 @@ $(function(){
         }
     });
     
+    $(window).resize(function(){
+        adjustCarouselHeight();
+    });
+    
+    adjustCarouselHeight();
     
     /*
      * Carouel
@@ -218,4 +235,10 @@ var isOnRetinaDisplay = function () {
     var retina = window.devicePixelRatio > 1;
     
     return retina;
+}
+
+var adjustCarouselHeight = function () {
+    var slideHeight = $(".slides-wrapper ul li").height();
+    $(".slides-wrapper ul").css("height", slideHeight);
+    return false;
 }

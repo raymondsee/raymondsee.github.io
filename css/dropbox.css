@@ -462,7 +462,8 @@ button.custom-blue-button, a.custom-blue-button {
         margin: 0px;
         padding: 0px;
         position: relative;
-        transform: translateZ(0px); }
+        transform: translateZ(0px);
+        height: 300px; }
         .container.carousel .carousel-wrapper .slides-wrapper ul li {
           position: absolute;
           top: 0px;
