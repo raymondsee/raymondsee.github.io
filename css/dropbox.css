@@ -429,11 +429,11 @@ button.custom-blue-button, a.custom-blue-button {
       width: 200px;
       height: 182px; }
   .container.business #key.reset, .container.business #watch.reset, .container.business #devices.reset {
-    -moz-transition: margin-left 10s ease-in, opacity 1s ease-in, 1s -moz-filter linear;
-    -webkit-transition: margin-left 10s ease-in, opacity 1s ease-in, 1s -webkit-filter linear;
-    -ms-transition: margin-left 10s ease-in, opacity 1s ease-in, 1s -ms-filter linear;
-    -o-transition: margin-left 10s ease-in, opacity 1s ease-in, 1s -o-filter linear;
-    transition: margin-left 10s ease-in, opacity 1s ease-in, 1s filter linear;
+    -moz-transition: margin-left 1s ease-in, opacity 1s ease-in, 1s -moz-filter linear;
+    -webkit-transition: margin-left 1s ease-in, opacity 1s ease-in, 1s -webkit-filter linear;
+    -ms-transition: margin-left 1s ease-in, opacity 1s ease-in, 1s -ms-filter linear;
+    -o-transition: margin-left 1s ease-in, opacity 1s ease-in, 1s -o-filter linear;
+    transition: margin-left 1s ease-in, opacity 1s ease-in, 1s filter linear;
     -moz-transition: all 0.5s cubic-bezier(0.63, 0.01, 0.52, 1.56);
     -webkit-transition: all 0.5s cubic-bezier(0.63, 0.01, 0.52, 1.56);
     -ms-transition: all 0.5s cubic-bezier(0.63, 0.01, 0.52, 1.56);
