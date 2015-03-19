@@ -25,10 +25,8 @@ $(function(){
     });
     
     $(".video-container").on("click", function(e){
-        
         if ($(e.target).hasClass("video-container")) {
             var video = $(this).find("video");
-            console.log(video[0].pause());
             $(this).hide();
             $("button.play-button").show();
         }
@@ -54,12 +52,6 @@ $(function(){
             $(window).unbind("scroll");
         }
     });
-    
-    $(window).resize(function(){
-        adjustCarouselHeight();
-    });
-    
-    adjustCarouselHeight();
     
     /*
      * Carouel
