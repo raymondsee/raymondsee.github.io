@@ -39,11 +39,10 @@ $(function(){
      */
     //var initTargetTop = null;
     var initTargetTop = document.getElementById("business-container").getBoundingClientRect().top;
+    var hasScrolled = false;
     $(window).scroll(function(){
-        var hasScrolled = false;
         var currentTargetTop = document.getElementById("business-container").getBoundingClientRect().top;
-   
-        if (initTargetTop!==null && Math.abs(currentTargetTop - initTargetTop) > 200) {
+        if (!hasScrolled && Math.abs(currentTargetTop - initTargetTop) > 200) {
             hasScrolled = true;
         } 
         
@@ -191,11 +190,11 @@ var slideInBusinessFeatures = function () {
         return false;
     }
     
-    $("#key").addClass("reset").css("margin-left", "865px").css("opacity", "1").css("-webkit-filter", "blur(2px)");
+    $("#key").addClass("reset").css("margin-left", "865px").css("opacity", "1");
         
     setTimeout(function() {
         $("#watch").addClass("reset").css("margin-left", "525px").css("opacity", "1");
-    }, 400);
+    }, 300);
 
     setTimeout(function() {
         $("#devices").addClass("reset").css("margin-left", "185px").css("opacity", "1");
@@ -208,7 +207,7 @@ var slideInBusinessFeatures = function () {
         $("#devices").removeClass("reset").attr("style", null);
         
         $("#business-container").addClass("normal");//xyz
-    }, 30000);
+    }, 2000);
 
     return false;
 }
